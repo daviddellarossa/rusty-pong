@@ -1,10 +1,14 @@
+mod constants;
+use constants::*;
+
 use macroquad::prelude::*;
+
 
 fn window_conf() -> Conf {
     Conf {
         window_title: "Rusty Pong".to_owned(),
-        window_width: 800,
-        window_height: 600,
+        window_width: SCREEN_WIDTH,
+        window_height: SCREEN_HEIGHT,
         window_resizable: false,
         ..Default::default()
     }
@@ -24,6 +28,7 @@ async fn main() {
         // 4. draw  
         clear_background(BLACK);
         // draw everything here
+        draw_rectangle(20.0, 260.0, PADDLE_WIDTH, PADDLE_HEIGHT, WHITE);
 
         next_frame().await;          // 5. present frame — always last
 

@@ -1,0 +1,14 @@
+pub const SCREEN_WIDTH: i32 = 800;
+pub const SCREEN_HEIGHT: i32 = 600;
+pub const PADDLE_WIDTH: f32 = 12.0;
+pub const PADDLE_HEIGHT: f32 = 80.0;
+pub const PADDLE_MARGIN: f32 = 20.0;
+pub const BALL_SIZE: f32 = 12.0;
+pub const PADDLE_SPEED: f32 = 350.0;
+pub const BALL_INITIAL_SPEED: f32 = 250.0;
+pub const BALL_SPEED_INCREMENT: f32 = 20.0;
+pub const MAX_BALL_SPEED: f32 = 600.0;
+pub const WINNING_SCORE: u32 = 7;
+pub const NET_DASH_HEIGHT: f32 = 20.0;
+pub const NET_DASH_GAP: f32 = 10.0;
+pub const NET_WIDTH: f32 = 4.0;     
