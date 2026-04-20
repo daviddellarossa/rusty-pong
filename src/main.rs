@@ -3,6 +3,7 @@ mod paddle;
 mod ball;
 mod collision;
 mod game;
+mod renderer;
 
 use constants::*;
 use macroquad::prelude::*;
@@ -23,21 +24,12 @@ async fn main() {
     let mut game = Game::new();
     
     loop {
-        let dt = get_frame_time().min(0.05);
-        
-        // Check collisions
-
-        // 3. update                                                                                                                                                                                                                                                                                                  
         // move things, check collisions, update score, etc.
         game.update();
         
-        // 4. draw  
-        clear_background(BLACK);
-        // draw everything here
-        game.pl.draw();
-        game.pr.draw();
-        game.ball.draw();
+        // draw
+        renderer::draw(&game);
 
-        next_frame().await;          // 5. present frame — always last
+        next_frame().await;
     }
 }
